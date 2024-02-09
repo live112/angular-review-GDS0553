@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1c19",
+      "fullname": "dasdasdkj",
+      "email": "dasdsa@gmail.com",
+      "password": "jesus"
+    },
+    {
+      "id": "91e4",
+      "fullname": "Hola",
+      "email": "jesus@gmail.com",
+      "password": "gola"
+    },
+    {
+      "id": "e576",
+      "fullname": "Hola",
+      "email": "jesus@gmail.com",
+      "password": "gola"
+    }
+  ]
+}
