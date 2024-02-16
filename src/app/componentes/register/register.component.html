@@ -1,45 +1,33 @@
 <form [formGroup]="registerForm" (ngSubmit)="enviarUsuario()">
-    <p-card header="Ingresar al sistema" [style]="{ width: '360px' }"> Nombre completo
-      <div class="field">
-        <input
-          type="text"
-          pInputText
-          formControlName="fullname"
-          placeholder="Nombre Completo"
-          class="w-full"
-        />
+  <p-card header="Ingresar al sistema" [style]="{ width: '360px' }"> Nombre completo
+    <div class="field">
+      <input type="text" pInputText formControlName="fullname" placeholder="Nombre Completo" class="w-full" />
+    </div>
+    <small *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)" class="block p-error">
+      <div *ngIf="fullname.hasError('required')">
+        Nombre completo
       </div>
-      <small *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)" class="block p-error">
-          <div *ngIf="fullname.hasError('required')">
-              Nombre Completo
-          </div>
-      </small>
-      <div class="field"> Correo Electronico
-        <input
-          type="text"
-          pInputText
-          formControlName="email"
-          placeholder="Ingresar E-mail"
-          class="w-full"
-        />
+    </small>
+    <div class="field"> Correo electronico
+      <input type="text" pInputText formControlName="email" placeholder="Ingresar E-mail" class="w-full" />
+    </div>
+    <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+      <div *ngIf="email.hasError('required')">
+        Ingresa un e-mail
       </div>
-      <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
-          <div *ngIf="email.hasError('required')">
-              Ingresa E-mail
-          </div>
-          <div *ngIf="email.hasError('email')">
-              email incorrecto
-          </div>
-      </small>
-      <div class="field">Contraseña
-        <p-password formControlName="password" [toggleMask]="true" styleClass="w-full"></p-password>
+      <div *ngIf="email.hasError('email')">
+        E-mail incorrecto
       </div>
-      <div class="field"> Confirma tu contraseña
-        <p-password formControlName="confirmPassword" [toggleMask]="true" styleClass="w-full"></p-password>
-      </div>
-        <p-button type="submit" label="Registrar" styleClass="w-full"></p-button>
-        <div class="mt-2">
-          ¿tienes Cuenta? <a routerLink="/login">Iniciar Sesion</a>
-        </div>
-    </p-card>
-  </form>
+    </small>
+    <div class="field">Contraseña
+      <p-password formControlName="password" [toggleMask]="true" styleClass="w-full"></p-password>
+    </div>
+    <div class="field"> Confirma tu contraseña
+      <p-password formControlName="confirmPassword" [toggleMask]="true" styleClass="w-full"></p-password>
+    </div>
+    <p-button type="submit" label="Registrar" styleClass="w-full"></p-button>
+    <div class="mt-2">
+      ¿Tienes cuenta? <a routerLink="/login">Iniciar sesión</a>
+    </div>
+  </p-card>
+</form>

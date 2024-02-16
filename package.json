@@ -1,5 +1,5 @@
 {
-  "name": "jyp-login-gds0553",
+  "name": "epa-login-gds0553",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:jyp-login-gds0553": "node dist/jyp-login-gds0553/server/server.mjs"
+    "serve:ssr:epa-login-gds0553": "node dist/epa-login-gds0553/server/server.mjs"
   },
   "private": true,
   "dependencies": {

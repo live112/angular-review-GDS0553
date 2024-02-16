@@ -1,28 +1,22 @@
-<form [formGroup]="loginForm">
-    <p-card header="Ingresar al sistema" [style]="{ width: '360px' }">
-      <div class="field">Ingresa Correo
-        <input
-          type="text"
-          pInputText
-          formControlName="email"
-          placeholder="Ingresa tu correo E-mail"
-          class="w-full"
-        />
-      </div> Contraseña
-      <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
-          <div *ngIf="email.hasError('required')">
-              Ingresa Contraseña
-          </div>
-          <div *ngIf="email.hasError('email')">
-              email incorrecto
-          </div>
-      </small>
-      <div class="field">
-        <p-password formControlName="password" [toggleMask]="true" styleClass="w-full"></p-password>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <p-card header="Ingresar al sistema" [style]="{ width: '360px' }">
+    <div class="field">Ingresa Correo
+      <input type="text" pInputText formControlName="email" placeholder="Ingresa tu correo" class="w-full" />
+    </div> Contraseña
+    <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+      <div *ngIf="email.hasError('required')">
+        Ingresa Contraseña
       </div>
-        <p-button label="Ingresar" styleClass="w-full"></p-button>
-        <div class="mt-2">
-          ¿No tienes Cuenta? <a routerLink="/register">Registrate</a>
-        </div>
-    </p-card>
-  </form>
+      <div *ngIf="email.hasError('email')">
+        E-mail incorrecto
+      </div>
+    </small>
+    <div class="field">
+      <p-password formControlName="password" [toggleMask]="true" styleClass="w-full"></p-password>
+    </div>
+    <p-button label="Ingresar" styleClass="w-full" type="submit"></p-button>
+    <div class="mt-2">
+      ¿No tienes cuenta? <a routerLink="/register">Registrate</a>
+    </div>
+  </p-card>
+</form>

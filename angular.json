@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jyp-login-gds0553": {
+    "epa-login-gds0553": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/jyp-login-gds0553",
+            "outputPath": "dist/epa-login-gds0553",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -90,10 +90,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "jyp-login-gds0553:build:production"
+              "buildTarget": "epa-login-gds0553:build:production"
             },
             "development": {
-              "buildTarget": "jyp-login-gds0553:build:development"
+              "buildTarget": "epa-login-gds0553:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +101,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "jyp-login-gds0553:build"
+            "buildTarget": "epa-login-gds0553:build"
           }
         },
         "test": {

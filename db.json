@@ -17,6 +17,24 @@
       "fullname": "Hola",
       "email": "jesus@gmail.com",
       "password": "gola"
+    },
+    {
+      "id": "e842",
+      "fullname": "ffsdg",
+      "email": "em@fdsfd",
+      "password": "xsxsxs"
+    },
+    {
+      "id": "3817",
+      "fullname": "Emilio Palacios",
+      "email": "emilio@gmail.com",
+      "password": "15234"
+    },
+    {
+      "id": "98dc",
+      "fullname": "Emilio",
+      "email": "emilio1@gmail.com",
+      "password": "15234"
     }
   ]
 }
