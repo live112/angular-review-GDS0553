@@ -4,6 +4,7 @@ import { Auth } from '../../interfaces/auth';
 import { AuthService } from '../../services/auth.service';
 import { MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
+import { passwordMatchValidator } from '../../shared/password-match.directive';
 
 @Component({
   selector: 'app-register',
@@ -11,12 +12,17 @@ import { Router } from '@angular/router';
   styleUrl: './register.component.css',
 })
 export class RegisterComponent {
-  registerForm = this.fb.group({
-    fullname: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required]],
-    confirmPassword: ['', [Validators.required]],
-  });
+  registerForm = this.fb.group(
+    {
+      fullname: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+      confirmPassword: ['', [Validators.required]],
+    },
+    {
+      validators: passwordMatchValidator,
+    }
+  );
 
   constructor(
     private fb: FormBuilder,
@@ -42,8 +48,6 @@ export class RegisterComponent {
   }
 
   enviarUsuario() {
-    console.log('Estoy enviando datos');
-
     const datos = { ...this.registerForm.value };
     delete datos.confirmPassword;
 

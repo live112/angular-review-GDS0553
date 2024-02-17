@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  errorData = false;
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]],
@@ -35,6 +36,8 @@ export class LoginComponent {
       if (response.length > 0 && response[0].password == password) {
         sessionStorage.setItem('email', email as string);
         this.router.navigate(['home']);
+      } else {
+        this.errorData = true;
       }
     });
   }

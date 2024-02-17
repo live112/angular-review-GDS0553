@@ -25,7 +25,22 @@
     <div class="field"> Confirma tu contraseña
       <p-password formControlName="confirmPassword" [toggleMask]="true" styleClass="w-full"></p-password>
     </div>
-    <p-button type="submit" label="Registrar" styleClass="w-full"></p-button>
+
+    <small *ngIf="
+              confirmPassword.invalid &&
+              (confirmPassword.dirty || confirmPassword.touched)
+            " class="block p-error">
+      <div *ngIf="confirmPassword.errors?.['required']">
+        Confirma la contraseña
+      </div>
+    </small>
+    <small class="block p-error"
+      *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid">
+      Las contraseñas deben coincidir
+    </small>
+
+
+    <p-button type="submit" label="Registrar" styleClass="w-full" [disabled]="registerForm.invalid"></p-button>
     <div class="mt-2">
       ¿Tienes cuenta? <a routerLink="/login">Iniciar sesión</a>
     </div>

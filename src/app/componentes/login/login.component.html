@@ -14,6 +14,7 @@
     <div class="field">
       <p-password formControlName="password" [toggleMask]="true" styleClass="w-full"></p-password>
     </div>
+    <div *ngIf="errorData">Datos incorrectos</div>
     <p-button label="Ingresar" styleClass="w-full" type="submit"></p-button>
     <div class="mt-2">
       ¿No tienes cuenta? <a routerLink="/register">Registrate</a>
