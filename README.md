@@ -1,27 +1,46 @@
 # EpaLoginGds0553
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+# Angular Review (EPA)
+ Alumno: Emilio Antonio Palacios Arvizu
+ Grupo: GDS0553
+ Fecha: 16-02-2024
 
-## Development server
+# Instalación
+Para empezar, se necesita clonar el repositorio
+   ~~~
+   git clone https://github.com/live112/angular-review-GDS0553
+   ~~~
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Instalación de módulos
+Para instalar módulos y dependencias generales:
+  ~~~
+  npm install
+  ~~~
 
-## Code scaffolding
+## Instalación manual
+1. Entramos al proyecto e ingresamos el siguiente comando en una terminal ubicada en el directorio del proyecto:
+   ~~~
+   npm install primeng
+   ~~~
+2. Instalación manual de JSON-SERVER
+2.1 Dentro de la misma terminal usada anteriormente usar:
+   ~~~
+   npm install json-server
+   ~~~
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Levantar el servidor JSON-SERVER
+1. En una terminal del proyecto ejecutamos este comando:
+   ~~~
+   json-server --watch db.json
+   ~~~
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Ejecutar el servidor
 
-## Running unit tests
+Para ejecutar el sevidor de Angular, debemos de estar dentro de la carpeta de nuestro proyecto en una terminal e ingresar este comando
+~~~
+ng serve --o
+~~~
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Dirección del servidor
+[Proyecto - localhost:4200](http://localhost:4200/)
