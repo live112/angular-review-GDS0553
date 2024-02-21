@@ -44,3 +44,6 @@ ng serve --o
 
 # Dirección del servidor
 [Proyecto - localhost:4200](http://localhost:4200/)
+
+# Tracking
+https://docs.google.com/document/d/12W2WjtBrAAgplDbMjfoWKtFMMZlYu6aw/edit?usp=sharing&ouid=109901326771560451749&rtpof=true&sd=true
